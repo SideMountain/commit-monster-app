@@ -24,7 +24,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '@/plugins/PushNotification.js', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
@@ -59,7 +59,23 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en',
+      lang: 'ja',
+      name: '勉強サポート - CommitMonster',
+      short_name: 'CommitMonster',
+      description: '毎日の勉強をサポートするアプリです。',
+      display: 'standalone',
+      theme_color: '#0000FF',
+      background_color: '#0000FF',
+      start_url: '/index.vue',
+      icons: [
+        {
+          src: '/icon.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+      ],
+      gcm_sender_id: '781205625909',
+      gcm_user_visible_only: true,
     },
   },
 
