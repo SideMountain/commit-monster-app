@@ -24,7 +24,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '@/plugins/PushNotification.js', mode: 'client' }],
+  plugins: [{ src: '~/plugins/PushNotification.js', ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
