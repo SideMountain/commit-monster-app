@@ -1,5 +1,5 @@
 <template>
-  <div>Hello Commit Monster2</div>
+  <div>Hello Commit Monster3</div>
 </template>
 
 <script lang="ts">

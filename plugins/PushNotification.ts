@@ -1,12 +1,12 @@
 class PushNotification {
-  constructor(id) {
+  constructor(id: string) {
     this.loadScript().then(() => {
       this.init(id)
     })
   }
 
   loadScript() {
-    return new Promise((resolve) => {
+    return new Promise((resolve: any) => {
       const doc = document
       const script = doc.createElement('script')
       script.async = false
@@ -16,8 +16,8 @@ class PushNotification {
     })
   }
 
-  init(id) {
-    const p7 = window.p7
+  init(id: string) {
+    const p7 = (window as any).p7
     p7.init(id, {
       mode: 'native',
       subscribe: 'auto',
@@ -28,7 +28,7 @@ class PushNotification {
   }
 }
 
-export default (_ctx, inject) => {
+export default (_ctx: any, inject: any) => {
   const $push7 = new PushNotification('0c8f98c0901a4ee397ebce38a463f1ff')
   inject('push7', $push7)
 }
