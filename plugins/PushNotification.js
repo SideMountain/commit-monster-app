@@ -29,6 +29,6 @@ class PushNotification {
 }
 
 export default (_ctx, inject) => {
-  const $push7 = new PushNotification('プッシュ通知設定のIDを入れる')
+  const $push7 = new PushNotification('0c8f98c0901a4ee397ebce38a463f1ff')
   inject('push7', $push7)
 }
