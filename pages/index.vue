@@ -1,9 +1,9 @@
 <template>
-  <div>Hello Commit Monster</div>
+  <div>Hello Commit Monster2</div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator';
+import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class Index extends Vue {}
