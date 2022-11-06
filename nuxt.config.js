@@ -24,7 +24,10 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '@/plugins/PushNotification.js', ssr: false }],
+  plugins: [
+    // { src: '@/plugins/PushNotification.js', ssr: false }
+    '@/plugins/firebase.client.js',
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
@@ -74,8 +77,9 @@ export default {
           type: 'image/png',
         },
       ],
-      gcm_sender_id: '781205625909',
-      gcm_user_visible_only: true,
+    },
+    workbox: {
+      cachingExtensions: '@/plugins/fcm.js',
     },
   },
 
